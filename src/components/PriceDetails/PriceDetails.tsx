@@ -18,14 +18,14 @@ export const PriceDetails = (props: any) => {
       {Object.keys(props.fpga).map(
         (key) =>
           props.fpga[key].name && (
-            <div className="flex justify-between">
+            <div key={key} className="flex justify-between">
               <div className="text-lg font-medium">{props.fpga[key].name}</div>
               <div className="text-lg">&#8377;{props.fpga[key].price}</div>
             </div>
           )
       )}
-      {props.interfaces.map((item: any) => (
-        <div className="flex justify-between">
+      {props.interfaces.map((item: any, index: number) => (
+        <div key={index} className="flex justify-between">
           <div className="text-lg font-medium">{item.name}</div>
           <div className="text-lg">&#8377;{item.price}</div>
         </div>
