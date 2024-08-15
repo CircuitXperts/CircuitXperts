@@ -1,0 +1,58 @@
+<HomePageStyle>
+<div className="carosel-banner">
+  <div className="banner-image">
+    <Carousel />
+  </div>
+</div>
+<div className="home-content">
+
+<TestCarousel />
+<div class="carousel">
+  <div class="carousel-content">
+    <div class="carousel-item">
+      Empower Your Business with Innovative Electronic Design
+    </div>
+    <div class="carousel-item">
+      Unlock the Potential of Electronics to Transform Your Business
+    </div>
+  </div>
+</div>
+
+<div class="service-class mt-4 ">
+  <h2 class="section-title text-3xl font-semibold text-center">Our Services</h2>
+  <ServiceCards />
+</div>
+
+<div className="design-circuit d-flex flex-column align-content-end text-center bg-primary text-white px-3 mb-3">
+  <div className="image-content d-flex justify-content-center mt-4 mb-2">
+    <img src="/images/Slide+4.jpg" alt="design-circuit" width="600" />
+  </div>
+  <div className="content">
+  <p className="fw-bold h2 py-3">Design My Circuit</p>
+
+    Specializes in creating and optimizing electronic designs, including FPGA schematic design, PCB layout, signal and power integrity analysis, and embedded system development. We provide comprehensive solutions from initial concept to final implementation, ensuring efficient and reliable electronic systems.
+
+<hr className="my-4 border-5" />
+Covers a wide range of topics including FPGA, ICs, ports, I/O, Ethernet, USB, and
+major brands like Intel, AMD, and Microsemi. Also includes resources for code and
+calculators to support design and implementation.
+
+  </div>
+  <div className="button-content  my-4 ">
+    <Link href="/product-cost" className="button btn">Design My Circuit</Link>
+  </div>
+</div>
+</div>
+
+</HomePageStyle>
+
+import Link from "next/link";
+import { Carousel } from "@/src/components/Carousel";
+import { Layouts } from "@/src/components/Layouts";
+import { HomePageStyle } from "@/src/styles/homepage";
+import { useEffect } from "react";
+import Image from "next/image";
+import { TestCarousel } from "@/src/components/testCarousel";
+import { ServiceCards } from "@/src/components/Cards";
+
+export default ({ children }) => <>{children}</>;

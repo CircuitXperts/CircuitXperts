@@ -1,0 +1,32 @@
+<CareerStyle>
+<Banner banner={banner} />
+  <div className="container">
+    <div className="main-content">
+      <h2 className="h2">Careers</h2>
+      <p className="h4">
+        Join our team at CircuitXperts! We are always looking for talented and
+        motivated individuals to help us innovate and grow. Below are our
+        current job openings. If you are interested in any of the positions,
+        please click on the "Apply Now" button to submit your application.
+      </p>
+      <p className="h2 text-center mt-3 mb-2">No Vacancy Right Now</p>
+    </div>
+  </div>
+</CareerStyle>
+
+import Link from "next/link";
+import { Layouts } from "@/src/components/Layouts";
+import Image from "next/image";
+import { CareerStyle } from "@/src/styles/careerstyle";
+import { Banner } from "@/src/components/Banner";
+import BannerImageD from "/public/images/Slide+2.jpg";
+
+export const banner = {
+  DImage: BannerImageD,
+  MbImage: BannerImageD,
+  bannerTitle: "Careers",
+  text: "Shape Your Future with Innovation and Impact.",
+  subtext: "",
+};
+
+export default ({ children }) => <>{children}</>;

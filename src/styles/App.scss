@@ -1,0 +1,40 @@
+// /* Customizations for the bootstrap variables */
+// @import "variables";
+
+// /* Import website styles */
+// @import "globals";
+// @import "Styles";
+
+// // Utilities
+// // @import "~bootstrap/scss/utilities/api";
+
+// // Import Bootstrap's functions
+// // @import "~bootstrap/scss/functions";
+
+// // Import Bootstrap's main SCSS file
+// @import "~bootstrap/scss/bootstrap";
+
+/* Customizations for the bootstrap variables */
+@import "variables";
+
+/* Import website styles */
+@import "globals";
+@import "Styles";
+
+/* Import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+/* Import tailwind to set changes */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  ol,
+  ul {
+    list-style-type: revert;
+  }
+  li {
+    margin-left: 2em;
+  }
+}

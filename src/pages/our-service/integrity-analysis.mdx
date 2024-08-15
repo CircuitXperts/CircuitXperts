@@ -1,0 +1,37 @@
+<PcbAssemblyPageStyle>
+<Banner banner={banner} />
+<div className="integrity-analysis-page">
+  <div className="w-[90%] mx-auto pi-container ">
+      <div className="main-content">
+          <h2>Power Integrity (PI) Analysis</h2>
+          <p>At CircuitXperts, we specialize in Power Integrity (PI) analysis to ensure the reliable performance and efficiency of your power distribution networks. Our PI analysis services help identify and mitigate issues related to power delivery, ensuring your designs meet performance and reliability standards.</p>
+
+          <div className="pi-analysis">
+          {
+            data.map((item, index) => <PageCard key={index} {...item} />)
+          }
+          </div>
+      </div>
+
+  </div>
+</div>
+</PcbAssemblyPageStyle>
+
+import Link from "next/link";
+import { Layouts } from "@/src/components/Layouts";
+import { PcbAssemblyPageStyle } from "@/src/styles/pcb-assembly";
+import Image from "next/image";
+import { Banner } from "@/src/components/Banner";
+import BannerImageD from "/public/images/Slide+2.jpg";
+import { data } from "@/src/data/pageData";
+import { PageCard } from "@/src/components/PageCard";
+
+export const banner = {
+  DImage: BannerImageD,
+  MbImage: BannerImageD,
+  bannerTitle: "Integrity Analysis",
+  text: "CircuitXperts: Where Signal and Power Integrity Meet Perfection",
+  subtext: "",
+};
+
+export default ({ children }) => <>{children}</>;

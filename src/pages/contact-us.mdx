@@ -1,0 +1,45 @@
+<ContactUsStyle>
+<Banner banner={banner} />
+<div class="container">
+    <div class="main-content [&>p]:text-justify [&>p]:mb-3 [&>p]:text-md [&>p]:text-gray-700">
+        <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
+        <p >Thank you for your interest in contacting CircuitXperts. We are here to provide information about our services and products, answer general questions, and assist with your inquiries. However, we cannot offer medical advice or treatment recommendations.</p>
+        <p>If you have a question related to a specific service or require immediate assistance, please reach out to us using the contact information below.</p>
+
+        <div class="contact-info">
+            <div>
+                <h3>Phone</h3>
+                <Image src="https://picsum.photos/200/300" width={100} height={100}alt="Phone"/>
+                <p>Please call: [+91-9235916122]<br/>Monday-Friday, 9 AM - 5 PM ET</p>
+            </div>
+            <div>
+                <h3>Email</h3>
+                <Image src="https://picsum.photos/200/300" width={100} height={100} alt="Email"/>
+                <p>[info@circuitxperts.com]</p>
+            </div>
+            <div>
+                <h3>Address</h3>
+                <Image src="https://picsum.photos/200/300" width={100} height={100} alt="Address" />
+                <p>[Raipur raja, Jail Road Near Sent Johon School Bahraich, Uttar Pradesh 271801]</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</ContactUsStyle>
+
+import Link from "next/link";
+import { Layouts } from "@/src/components/Layouts";
+import Image from "next/image";
+import { ContactUsStyle } from "@/src/styles/contactstyle";
+import { Banner } from "@/src/components/Banner";
+import BannerImageD from "/public/images/Slide+2.jpg";
+
+export const banner = {
+  DImage: BannerImageD,
+  MbImage: BannerImageD,
+  bannerTitle: "Contact Us",
+  text: "Shape Your Future with Innovation and Impact.",
+  subtext: "",
+};
+export default ({ children }) => <>{children}</>;

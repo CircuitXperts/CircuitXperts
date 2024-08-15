@@ -1,0 +1,183 @@
+// // Override Bootstrap's Sass default variables
+
+// // import Bootstrap source Sass file.
+
+// // Variables should follow the `$component-state-property-size` formula for
+// // consistent naming . Ex: $nav-disabled-color and $modal-content-box-shadow-xs.
+
+// // The complete list of Bootstrap's variable can be found here
+// // https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+// // @import "~bootstrap/scss/function";
+// // @import "~bootstrap/scss/variables";
+// // @import "~bootstrap/scss/variables-dark";
+
+// $light-blue: #019cdc;
+// $medium-blue: #1c75bc;
+// $dark-blue: #003479;
+// $body-copy: #333;
+// $white: #fff;
+// $teel: #3c6884;
+// $site-grey: #070708;
+// $grey: #f7f7f7;
+// $site-red: #f04e2b;
+// $light-teel:#51a896;
+// $teal-shade: #18988b;
+
+// // $body-bg: $white;  //Uncomment for chnage boady color and update this
+// $body-color: $body-copy; // update this change body-copy color
+// $primary: $light-blue;
+// $secondary: $teal-shade;
+// $body-color: $site-grey;
+// $theme-colors: (
+//     "primary": $primary,
+//     "secondary": $secondary,
+//     "teel": $teel,
+//     "white": $white,
+//     "site-grey": $site-grey,
+//     "light-teel": $light-teel,
+//     "site-red": $site-red,
+//     "grey": $grey,
+// );
+// $link-color: $white; // Update to change nav link color
+// $link-decoration: none; // Update this to change link underline.
+// $link-hover-color: $dark-blue; // Update this to change link hover color.
+// $link-hover-decoration: underline; // Update this to change link underline on hover.
+// $Sparagraph-margin-bottom: calc(1rem - 1px); //Update this to change paragraph bottom margin.
+
+// // Update Font Family
+// $font-family-base: georgia, sans-serif;
+// $font-family-roboto: "Roboto", "Open Sans", arial, sans-serif;
+// $spacer: 5px;
+// $spacers: (
+//     0: 0,
+//     1: $spacer * 1,
+//     2: $spacer * 2,
+//     3: $spacer * 3,
+//     4: $spacer * 4,
+//     5: $spacer * 5,
+//     6: $spacer * 6,
+//     7: $spacer * 7,
+//     8: $spacer * 8,
+//     9: $spacer * 9,
+//     10: $spacer * 10,
+//     11: $spacer * 11,
+//     12: $spacer * 12,
+//     13: $spacer * 13,
+//     14: $spacer * 14,
+//     15: $spacer * 15,
+//     16: $spacer * 16,
+//     17: $spacer * 17,
+//     18: $spacer * 18,
+//     19: $spacer * 19,
+//     20: $spacer * 20,
+// );
+
+// // Update font base
+// $font-family-base: $font-family-roboto;
+// $font-weight-medium: 500;
+// $font-sizes: (                                                                                          cx
+//     10: 10px,
+//     11: 11px,
+//     12: 12px,
+//     13: 13px,
+//     14: 14px,
+//     15: 15px,
+//     16: 16px,
+//     17: 17px,
+//     18: 18px,
+//     19: 19px,
+//     20: 20px,
+//     22: 22px,
+//     25: 25px,
+//     30: 30px,
+//     35: 30px,
+//     40: 40px,
+//     45: 45px,
+//     50: 50px,
+//     55: 50px,
+//     60: 60px,
+// );
+
+// // Update Font Size
+// $font-size-base: 1.125rem;  //the browser default, typically `18px`
+// $font-size-sm: $font-size-base * 0.875; // Update font size for sm
+// $font-size-lg: $font-size-base * 1.25; // Update font size for lg
+
+// // update Line Height
+// $line-height-base: 1.2;
+// $nav-link-padding-y: 0.5rem;
+// $nav-link-padding-x: 0.5rem;
+// $nav-link-font-size: $font-size-base;
+// $nav-link-color: $link-color;
+// $nav-link-hover-color: $dark-blue;
+// $nav-tabs-link-active-color: $link-color;
+// $navbar-light-color: $link-color;
+// $navbar-light-hover-color: $dark-blue;
+// $navbar-light-active-color: $dark-blue;
+// $navbar-nav-link-padding-x: 1.25rem; //this will override $nav-link-padding-x
+
+//
+
+// Override Bootstrap's Sass default variables
+
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows to override the default values of those variables before
+// import Bootstrap source Sass files.
+
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// The complete list of Bootstrap’s variables can be found here
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+
+$karo-light-blue: #019cdc;
+$karo-medium-blue: #1c75bc;
+$karo-dark-blue: #003479;
+$body-copy: #333;
+$karo-orange: #fc6850;
+
+/// Gloabal color variables
+
+// $body-bg:                         $white;    // Uncomment this and update this to change body color.
+$body-color: $body-copy; // Update this to change Body copy color.
+$primary: $karo-dark-blue; // Update this change primary link color.
+$link-color: $primary; // Update to change nav link color
+$link-decoration: none; // Update this to change link underline.
+$link-hover-color: $karo-dark-blue; // Update this to change link hover color.
+$link-hover-decoration: underline; // Update this to change link underline on hover.
+$paragraph-margin-bottom: calc(
+  1rem - 1px
+); // Update this to change paragraph bottom margin.
+
+// Update Font Family
+$font-family-base: georgia, sans-serif;
+
+// Update Font Size
+$font-size-base: 1.125rem; // Assumes the browser default, typically `18px`
+$font-size-sm: $font-size-base * 0.875; // Update font size for sm
+$font-size-lg: $font-size-base * 1.25; // Update font size for lg
+
+// Update Line Height
+$line-height-base: 1.2;
+$nav-link-padding-y: 0.5rem;
+$nav-link-padding-x: 0.5rem;
+$nav-link-font-size: $font-size-base;
+$nav-link-color: $link-color;
+$nav-link-hover-color: $karo-dark-blue;
+$nav-tabs-link-active-color: $link-color;
+$navbar-light-color: $link-color;
+$navbar-light-hover-color: $karo-dark-blue;
+$navbar-light-active-color: $karo-dark-blue;
+$navbar-nav-link-padding-x: 1.25rem; // This will override $nav-link-padding-x
+
+// To update default containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Container padding
+$container-padding-x: calc(2rem - 2px);

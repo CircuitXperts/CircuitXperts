@@ -1,0 +1,68 @@
+<PcbAssemblyPageStyle>
+ <div className="container">
+      <div className="main-content">
+          <h2>PCB Assembly</h2>
+          <p>At CircuitXperts, we provide comprehensive PCB assembly services to ensure your electronic products are assembled with precision and quality. Our state-of-the-art facilities and skilled team ensure that each PCB assembly meets the highest standards of performance and reliability.</p>
+
+          <div className="pcb-assembly">
+              <div className="assembly">
+                  <h3>Advanced Assembly Processes</h3>
+                  <Image src="https://picsum.photos/200/300" width={100} height={100} alt="PCB Assembly Process"/>
+                  <div className="assembly-description">
+                      <p>Our advanced assembly processes include:</p>
+                      <ul>
+                          <li>Surface Mount Technology (SMT) Assembly</li>
+                          <li>Through-Hole Technology (THT) Assembly</li>
+                          <li>Mixed Technology (SMT and THT) Assembly</li>
+                          <li>Automated Optical Inspection (AOI)</li>
+                          <li>X-ray Inspection for BGAs</li>
+                      </ul>
+                      <p>These processes ensure high-quality and reliable assembly for various types of PCB designs, from simple to complex.</p>
+                  </div>
+              </div>
+
+              <div className="assembly">
+                  <h3>Quality Assurance</h3>
+                  <Image src="https://picsum.photos/200/300" width={100} height={100}alt="Quality Assurance in PCB Assembly"/>
+                  <div className="assembly-description">
+                      <p>We prioritize quality at every step of the assembly process. Our quality assurance measures include:</p>
+                      <ul>
+                          <li>In-circuit Testing (ICT)</li>
+                          <li>Functional Testing</li>
+                          <li>Environmental Stress Screening (ESS)</li>
+                          <li>Continuous Process Monitoring</li>
+                          <li>Compliance with IPC-A-610 Standards</li>
+                      </ul>
+                      <p>These stringent quality checks ensure that every assembled PCB functions flawlessly and meets your specifications.</p>
+                  </div>
+              </div>
+
+              <div className="assembly">
+                  <h3>Customized Solutions</h3>
+                  <Image src="https://picsum.photos/200/300" width={100} height={100} alt="Customized PCB Assembly Solutions"/>
+                  <div className="assembly-description">
+                      <p>We offer customized assembly solutions tailored to your specific needs, including:</p>
+                      <ul>
+                          <li>Prototyping and small-batch production</li>
+                          <li>High-volume production runs</li>
+                          <li>Turnkey assembly solutions</li>
+                          <li>Consignment and partial turnkey assembly</li>
+                          <li>Specialized assembly for unique applications</li>
+                      </ul>
+                      <p>Our flexible and adaptive approach ensures that your PCB assemblies are optimized for performance, reliability, and cost-effectiveness.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</PcbAssemblyPageStyle>
+
+import Link from "next/link";
+import { Layouts } from "@/src/components/Layouts";
+import { PcbAssemblyPageStyle } from "@/src/styles/pcb-assembly";
+import Image from "next/image";
+
+export default ({ children }) => <>{children}</>;
+
+;

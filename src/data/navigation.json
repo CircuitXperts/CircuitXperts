@@ -1,0 +1,75 @@
+{
+  "mainNav": {
+    "links": [
+      {
+        "title": "About Us",
+        "href": "/about-us"
+      },
+      {
+        "title": "Services",
+        "href": "/our-service",
+        "subMenu": [
+          {
+            "title": "Schematic Design",
+            "href": "/our-service/schematic-design"
+          },
+          {
+            "title": "PCB Solutions",
+            "href": "/our-service/pcb-solutions"
+          },
+          {
+            "title": "Integrity Analysis",
+            "href": "/our-service/integrity-analysis"
+          },
+          {
+            "title": "System Validation",
+            "href": "/our-service/system-validation"
+          },
+          {
+            "title": "Embedded Solutions",
+            "href": "/our-service/embedded-solutions"
+          },
+          {
+            "title": "Programming",
+            "href": "/our-service/programming"
+          }
+        ]
+      },
+      {
+        "title": "Projects",
+        "href": "/projects-page"
+      },
+      {
+        "title": "Design My Circuit",
+        "href": "/product-cost"
+      },
+      {
+        "title": "Careers",
+        "href": "/careers"
+      },
+      {
+        "title": "Contact Us",
+        "href": "/contact-us"
+      }
+    ]
+  },
+  "topUtilityNav": {
+    "links": [
+      {
+        "title": "Kt website",
+        "href": "",
+        "target": "_blank"
+      },
+      {
+        "title": "Talk With Us",
+        "href": "",
+        "target": "_self"
+      },
+      {
+        "title": "Contact Us",
+        "href": "/contact-us",
+        "target": "_self"
+      }
+    ]
+  }
+}

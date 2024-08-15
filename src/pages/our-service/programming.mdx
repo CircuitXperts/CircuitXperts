@@ -1,0 +1,18 @@
+<Banner banner={banner} />
+<h2 className="h2 mt-3 mb-3 text-center"> This Page is Inprogress</h2>{" "}
+
+import Link from "next/link";
+import { Layouts } from "@/src/components/Layouts";
+import Image from "next/image";
+import { Banner } from "@/src/components/Banner";
+import BannerImageD from "/public/images/Slide+2.jpg";
+
+export const banner = {
+  DImage: BannerImageD,
+  MbImage: BannerImageD,
+  bannerTitle: "Programming",
+  text: "CircuitXperts: Integrated Programming for Hardware and Software Excellence",
+  subtext: "",
+};
+
+export default ({ children }) => <>{children}</>;
