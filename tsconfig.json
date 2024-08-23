@@ -19,10 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
+      "@/*": ["./*"]
+    }
   },
   "include": [
     // Include
@@ -40,5 +38,5 @@
     "./MockData",
     "./cache"
   ],
-  "types": ["node"],
+  "types": ["node"]
 }

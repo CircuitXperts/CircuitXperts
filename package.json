@@ -11,14 +11,14 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "postbuild": "next-sitemap & run-report",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "npm run lint:js; npm run lint:css; npm run lint:styles",
     "lint:js": "next lint",
     "lint:css": "stylelint --config .stylelintrc-css.json './src/**/*.{css,scss}'",
     "lint:styles": "stylelint './src/**/*.{js,ts,tsx}'",
-    "prepare": "npx husky install"
+    "prepare": "npx husky install",
+    "run-report": "node scripts/run-report.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.4",
