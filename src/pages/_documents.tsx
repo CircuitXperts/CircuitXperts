@@ -1,21 +1,26 @@
-import Document, { DocumentContext, Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  DocumentContext,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 class JxpDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getStaticProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
         });
 
-      const initialProps = await Document.getInitialProps(ctx);
       return {
-        ...initialProps,
-        styles: [initialProps.styles, sheet.getStyleElement()],
+        styles: [{}, sheet.getStyleElement()],
       };
     } finally {
       sheet.seal();
@@ -35,3 +40,9 @@ class JxpDocument extends Document {
 }
 
 export default JxpDocument;
+
+export const getStaticProps = (ctx: any) => {
+  return {
+    props: {},
+  };
+};
