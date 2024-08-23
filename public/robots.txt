@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.circuitxperts.com
+
+# Sitemaps
+Sitemap: https://www.circuitxperts.com/sitemap.xml
