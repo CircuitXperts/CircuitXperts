@@ -7,7 +7,7 @@ export const Card = (props: any) => {
         <img src={props.image} className="w-16 images-icon" alt="image" />
         <div className="head-text">{props.name}</div>
       </div>
-      <div className="card-description py-4 fw-semibold pe-lg-2 text-justify">
+      <div className="card-description py-4 pe-lg-2 text-justify">
         {props.desc}
       </div>
       <a href={props.link} className="show-card-link d-flex justify-center">

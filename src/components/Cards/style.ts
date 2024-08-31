@@ -17,7 +17,7 @@ export const CardStyles = styled.div`
         }
 
         .head-text {
-          font-size: 24px;
+          font-size: 20px;
           font-family: ${(props) => props.theme.font.barlowBold};
           color: ${(props) => props.theme.color.orange};
           border-bottom: 4px solid ${(props) => props.theme.color.darkerblue};
@@ -35,7 +35,7 @@ export const CardStyles = styled.div`
         border-radius: 12px;
         cursor: pointer;
         display: inline-block;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 2.5;
         outline: transparent;
@@ -53,10 +53,6 @@ export const CardStyles = styled.div`
         color: ${(props) => props.theme.color.blue};
         font-family: ${(props) => props.theme.font.barlowBold};
         box-shadow: 8px 6px 4px;
-
-        @media ${(props) => props.theme.device.lg} {
-          margin: 0;
-        }
 
         &:hover {
           color: ${(props) => props.theme.color.orange};

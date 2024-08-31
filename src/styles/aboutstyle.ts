@@ -11,7 +11,6 @@ export const AboutStyle = styled.div`
         font-size: 18px;
 
         @media ${(props) => props.theme.device.lg} {
-          font-size: 20px;
           border-right: 4px solid ${(props) => props.theme.color.orange};
         }
       }
@@ -35,11 +34,8 @@ export const AboutStyle = styled.div`
       }
 
       .text-link {
-        font-size: 22px;
+        font-size: 20px;
         font-family: ${(props) => props.theme.font.barlowBold};
-
-        @media ${(props) => props.theme.device.lg} {
-        }
       }
 
       .phn-number,
@@ -63,7 +59,7 @@ export const AboutStyle = styled.div`
         }
 
         .icon {
-          font-size: 45px;
+          font-size: 36px;
         }
       }
     }

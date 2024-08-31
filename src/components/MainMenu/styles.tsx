@@ -26,7 +26,7 @@ export const MenuStyle = styled.div`
 
       @media ${(props) => props.theme.device.lg} {
         display: flex;
-        max-width: 1364px;
+        max-width: 1217px;
         margin: 0 auto;
         background: none;
       }
@@ -41,6 +41,10 @@ export const MenuStyle = styled.div`
         img.site-logo {
           max-width: 194px;
           max-height: 67px;
+        }
+
+        .navbar-brand {
+          width: 195px;
         }
       }
     }

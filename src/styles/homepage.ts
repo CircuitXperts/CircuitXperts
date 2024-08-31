@@ -14,7 +14,7 @@ export const HomePageStyle = styled.div`
           color: #ffffff;
           cursor: pointer;
           display: inline-block;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 500;
           line-height: 2.5;
           outline: transparent;

@@ -23,11 +23,10 @@ export const UtilityMenuStyle = styled.div`
 
     @media ${(props) => props.theme.device.lg} {
       justify-content: flex-end !important;
-      max-width: 1364px;
+      max-width: 1217px;
       margin: 0 auto !important;
       display: flex !important;
       line-height: 24px;
-      padding: 0;
     }
 
     li {

@@ -129,10 +129,10 @@ export const SiteStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: ${BarlowRegular.style.fontFamily};
-    font-size: 18px;
+    font-size: 16px;
 
     @media ${SiteTheme.device.lg} {
-      font-size: 20px;
+      /* font-size: 18px; */
     }
 
     a {
@@ -177,11 +177,11 @@ export const SiteStyle = createGlobalStyle`
 
   .gradient-text {
     color: ${(props) => props.theme.color.blue};
-    font-size: 45px;
+    font-size: 30px;
     font-family: ${(props) => props.theme.font.barlowBold};
 
     @media ${SiteTheme.device.lg} { 
-        font-size: 60px;
+        font-size: 40px;
     }
   }
 
@@ -189,6 +189,19 @@ export const SiteStyle = createGlobalStyle`
       color: ${(props) => props.theme.color.orange};
       border-bottom: 4px solid;
       font-family: ${(props) => props.theme.font.barlowBold};
+      font-size: 24px;
+
+      @media ${SiteTheme.device.lg} { 
+        font-size: 32px;
+      }
+    }
+
+    .text-size {
+      font-size: 20px;
+
+      @media ${SiteTheme.device.lg} { 
+        font-size: 24px;
+      }
     }
 
     .site-container {
@@ -197,6 +210,6 @@ export const SiteStyle = createGlobalStyle`
 
       @media (max-width: 1250px) {
         padding: 0 16px;
-      }
     }
+  }
 `;

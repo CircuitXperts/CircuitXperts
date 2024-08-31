@@ -83,7 +83,7 @@ export const BannerStyle = styled.div`
         .heading {
           color: ${(props) => props.theme.color.white};
           font-family: ${(props) => props.theme.font.barlowBold};
-          font-size: 32px;
+          font-size: 20px;
           font-style: normal;
           font-weight: 700;
           line-height: 110%;
@@ -93,7 +93,7 @@ export const BannerStyle = styled.div`
           position: relative;
 
           @media ${(props) => props.theme.device.lg} {
-            font-size: 50px;
+            font-size: 32px;
             padding: 12px 16px;
           }
 
@@ -154,7 +154,7 @@ export const BannerStyle = styled.div`
             margin-bottom: 0;
 
             @media ${(props) => props.theme.device.lg} {
-              font-size: 36px;
+              font-size: 34px;
             }
           }
         }

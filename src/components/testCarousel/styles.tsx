@@ -23,7 +23,7 @@ export const TestStyle = styled.div`
     text-align: center;
     background-color: ${(props) => props.theme.color.orange};
     color: ${(props) => props.theme.color.blue};
-    font-size: 2rem;
+    font-size: 20px;
     margin-right: 0;
     font-family: ${(props) => props.theme.font.barlowBold};
     padding: 15px 0;
