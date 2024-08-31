@@ -131,6 +131,10 @@ export const SiteStyle = createGlobalStyle`
     font-family: ${BarlowRegular.style.fontFamily};
     font-size: 18px;
 
+    @media ${SiteTheme.device.lg} {
+      font-size: 20px;
+    }
+
     a {
       color: ${SiteTheme.color.link};
       text-decoration: none;
@@ -159,7 +163,7 @@ export const SiteStyle = createGlobalStyle`
   }
 
   .container h1 {
-    margin-top: 45px;
+    margin-top: 25px;
     text-align: center;
   }
 
@@ -170,4 +174,29 @@ export const SiteStyle = createGlobalStyle`
   .nowrap {
     white-space: nowrap;
   }
+
+  .gradient-text {
+    color: ${(props) => props.theme.color.blue};
+    font-size: 45px;
+    font-family: ${(props) => props.theme.font.barlowBold};
+
+    @media ${SiteTheme.device.lg} { 
+        font-size: 60px;
+    }
+  }
+
+    .text-orange {
+      color: ${(props) => props.theme.color.orange};
+      border-bottom: 4px solid;
+      font-family: ${(props) => props.theme.font.barlowBold};
+    }
+
+    .site-container {
+      max-width: 1216px;
+      margin: auto;
+
+      @media (max-width: 1250px) {
+        padding: 0 16px;
+      }
+    }
 `;

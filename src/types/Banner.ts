@@ -7,6 +7,6 @@ export interface BannerType {
   DImage: Image;
   MbImage: Image;
   bannerTitle: string;
-  text: string;
-  subtext: string;
+  text1: string;
+  text2: string;
 }

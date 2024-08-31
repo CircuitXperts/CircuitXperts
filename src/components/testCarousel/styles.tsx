@@ -6,7 +6,6 @@ export const TestStyle = styled.div`
     margin: auto;
     overflow: hidden;
     position: relative;
-    height: 300px;
   }
 
   .carousel-content {
@@ -22,9 +21,11 @@ export const TestStyle = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #4287f5; /* Adjust background color */
-    color: #fff;
+    background-color: ${(props) => props.theme.color.orange};
+    color: ${(props) => props.theme.color.blue};
     font-size: 2rem;
     margin-right: 0;
+    font-family: ${(props) => props.theme.font.barlowBold};
+    padding: 15px 0;
   }
 `;

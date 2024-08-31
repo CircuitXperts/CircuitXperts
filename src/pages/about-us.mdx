@@ -1,48 +1,45 @@
 <AboutStyle>
 <Banner banner={banner} />
 <div className="about-page">
-    <div className="banner d-none">
-        <h1 className="h1">About Us</h1>
-    </div>
-    <div className="container">
-        <div className="main-content">
-            <p className="mb-2 fw-bold h1">Welcome to CircuitXperts!</p>
-<div className="d-lg-flex">
-            <p className="mb-2">CircuitXperts is a cutting-edge technology company dedicated to providing comprehensive solutions in the field of electronic design and manufacturing. Our team of experts specializes in a range of services, including FPGA design, Signal Integrity (SI) Analysis, Power Integrity (PI), PCB Manufacturing, PCB Assembly, Test Code development, Embedded Software, IP Core design, and comprehensive testing. With a commitment to innovation and quality, we strive to deliver products and services that meet the highest standards of excellence.</p>
-            <Image src={FpgImg} width={500} height={500} alt="Image" className="m-auto"/>
-</div>
-            <h2 className="mb-2 fw-bold h2">Our Mission</h2>
-            <p className="mb-3">At CircuitXperts, our mission is to empower our clients with innovative and reliable electronic solutions. We are committed to delivering high-quality products and services that drive success and growth for our clients. Our focus on excellence, integrity, and customer satisfaction is the cornerstone of our business.</p>
+    <div className="site-container">
+        <div className="main-content mb-5 mb-lg-6">
+            <p className="pb-2 fw-bold h1 text-orange">Welcome to <span className="gradient-text">CircuitXperts!</span></p>
+            <div className="left-content d-lg-flex py-lg-5 align-items-center">
+                <p className="head-text pb-3 pe-lg-6 pt-4 pt-lg-2">CircuitXperts is a cutting-edge technology company dedicated to providing comprehensive solutions in the field of electronic design and manufacturing. Our team of experts specializes in a range of services, including FPGA design, Signal Integrity (SI) Analysis, Power Integrity (PI), PCB Manufacturing, PCB Assembly, Test Code development, Embedded Software, IP Core design, and comprehensive testing. With a commitment to innovation and quality, we strive to deliver products and services that meet the highest standards of excellence.</p>
+                <Image src={FpgImg} alt="dot" className="m-auto image-right" />
+            </div>
+            <h2 className="pb-2 fw-bold h3 text-orange pt-4">Our Mission</h2>
+            <p className="mb-3 pt-4 pt-lg-5 pb-1">At CircuitXperts, our mission is to empower our clients with innovative and reliable electronic solutions. We are committed to delivering high-quality products and services that drive success and growth for our clients. Our focus on excellence, integrity, and customer satisfaction is the cornerstone of our business.</p>
 
-            <h2 className="mb-3 fw-bold h2">Why Choose Us?</h2>
-            <ul className="mb-3">
-                <li className="mb-1"><strong>Expertise:</strong> Our team consists of highly skilled professionals with extensive experience in electronic design and manufacturing.</li>
-                <li className="mb-1"><strong>Innovation:</strong> We stay at the forefront of technology, continuously exploring new methods and tools to improve our services.</li>
-                <li className="mb-1"><strong>Quality:</strong> Quality is our top priority. We adhere to strict standards and protocols to ensure the highest level of quality in every project.</li>
+            <h2 className="pb-2 fw-bold h3 text-orange pt-lg-5">Why Choose Us?</h2>
+            <ul className="mb-3 pt-4 pt-lg-5">
+                <li className="mb-1 mb-lg-2"><strong>Expertise:</strong> Our team consists of highly skilled professionals with extensive experience in electronic design and manufacturing.</li>
+                <li className="mb-1 mb-lg-2"><strong>Innovation:</strong> We stay at the forefront of technology, continuously exploring new methods and tools to improve our services.</li>
+                <li className="mb-1 mb-lg-2"><strong>Quality:</strong> Quality is our top priority. We adhere to strict standards and protocols to ensure the highest level of quality in every project.</li>
                 <li className="mb-1"><strong>Customer-Centric Approach:</strong> We value our clients and strive to build long-lasting relationships based on trust and mutual success.</li>
             </ul>
 
-            <h2 className="mb-2 fw-bold h2">Contact Us</h2>
-            <div className="contact-info d-flex ">
+            <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6">Contact Us</h2>
+            <div className="contact-info d-flex pt-4 pt-lg-5 ">
                 <div>
-                    <h3 className="mb-2 fw-bold h3" >Phone</h3>
-                    <div className="d-flex m-0 gap-5">
-                        <i className="bi bi-telephone"></i>
-                        <Link href="tel:+91-9235916122" target="" className="phone"><small>+91-9235916122</small></Link>
+                    <h3 className="mb-2 fw-bold text-link" >Phone</h3>
+                    <div className="d-flex m-0 gap-5 align-items-center phn-number">
+                        <i className="bi bi-telephone icon"></i>
+                        <Link href="tel:+91-9235916122" target="" className="phone">+91-9235916122</Link>
                     </div>
                 </div>
                 <div>
-                    <h3 className="mb-2 fw-bold h3">Email</h3>
-                    <div className="d-flex m-0 gap-5">
-                        <i class="bi bi-envelope-at-fill"></i>
+                    <h3 className="mb-2 fw-bold text-link">Email</h3>
+                    <div className="d-flex m-0 gap-5 align-items-center phn-email">
+                        <i class="bi bi-envelope-at-fill icon"></i>
                         <Link href="mailto:info@circuitxperts.com" target="" className="mail">info@circuitxperts.com</Link>
                     </div>
                 </div>
                 <div>
-                    <h3 className="mb-2 fw-bold h3">Address</h3>
-                    <div className="d-flex m-0 gap-5">
-                        <i className="bi bi-geo-alt-fill"></i>
-                        Raipur raja, Jail Road Near Sent Johon School Bahraich, Uttar Pradesh 271801
+                    <h3 className="mb-2 fw-bold text-link">Address</h3>
+                    <div className="d-flex m-0 gap-5 align-items-center phn-add" >
+                        <i className="bi bi-geo-alt-fill icon"></i>
+                        <p className="fw-semibold text-address">Raipur raja, Jail Road Near Sent Johon School Bahraich, Uttar Pradesh 271801</p>
                     </div>
                 </div>
             </div>
@@ -58,14 +55,14 @@ import Image from "next/image";
 import { AboutStyle } from "@/src/styles/aboutstyle";
 import { Banner } from "@/src/components/Banner";
 import BannerImageD from "/public/images/Slide+2.jpg";
+import BannerImageMb from "/public/images/Slide+3.jpg";
 import FpgImg from "/public/images/Slide+3.jpg";
 
 export const banner = {
   DImage: BannerImageD,
   MbImage: BannerImageD,
   bannerTitle: "ABOUT",
-  text: "CircuitXperts is a cutting-edge technology company",
-  subtext: "",
+  text2: "CircuitXperts is a cutting-edge technology company",
 };
 
 export default ({ children }) => <>{children}</>;

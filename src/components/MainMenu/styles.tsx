@@ -218,6 +218,7 @@ export const MenuStyle = styled.div`
         @media ${(props) => props.theme.device.mdmax} {
           position: relative;
           padding-top: 40px;
+          margin: 0;
         }
 
         &::before {

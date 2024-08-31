@@ -18,7 +18,7 @@ export const HeaderStyle = styled.header`
       transition: transform 0.5s ease, z-index 0s linear;
 
       @media ${(props) => props.theme.device.mdmax} {
-        top: -88px;
+        top: -107px;
       }
     }
 

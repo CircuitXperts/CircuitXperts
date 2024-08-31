@@ -1,23 +1,74 @@
 import styled from "styled-components";
-import aboutbg from "/public/images/Slide+1.jpg";
 
 export const AboutStyle = styled.div`
-  .container {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-  }
-
   .main-content {
-    padding: 20px;
-    background: #fff;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .left-content {
+      @media ${(props) => props.theme.device.lg} {
+        gap: 45px;
+      }
+
+      .head-text {
+        font-size: 18px;
+
+        @media ${(props) => props.theme.device.lg} {
+          font-size: 20px;
+          border-right: 4px solid ${(props) => props.theme.color.orange};
+        }
+      }
+
+      .image-right {
+        @media ${(props) => props.theme.device.lg} {
+          max-width: 500px;
+          width: 100%;
+        }
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > div {
+        flex: 1;
+        margin: 10px;
+      }
+
+      .text-link {
+        font-size: 22px;
+        font-family: ${(props) => props.theme.font.barlowBold};
+
+        @media ${(props) => props.theme.device.lg} {
+        }
+      }
+
+      .phn-number,
+      .phn-email,
+      .phn-add {
+        font-family: ${(props) => props.theme.font.barlowBold};
+
+        .phone,
+        .mail {
+          color: ${(props) => props.theme.color.link};
+          transition: color 0.3s;
+
+          &:hover {
+            color: ${(props) => props.theme.color.orange};
+            text-decoration: none;
+          }
+        }
+
+        .text-address {
+          color: ${(props) => props.theme.color.link};
+        }
+
+        .icon {
+          font-size: 45px;
+        }
+      }
+    }
   }
 
-  h2 {
-    color: #333;
-  }
   .services img,
   .contact img {
     width: 100%;
@@ -26,13 +77,25 @@ export const AboutStyle = styled.div`
   .service-item {
     margin-bottom: 20px;
   }
-  .contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .contact-info div {
-    flex: 1;
-    margin: 10px;
+
+  .banner-wrapper {
+    .banner-text {
+      .banner-wrap {
+        .banner-content {
+          margin: 0 16px;
+          padding: 82px 0 40px;
+          top: 0;
+
+          @media ${(props) => props.theme.device.lg} {
+            padding: 157px 0 77px;
+            margin: 0 auto;
+          }
+
+          @media (min-width: 992px) and (max-width: 1250px) {
+            padding-left: 16px;
+          }
+        }
+      }
+    }
   }
 `;

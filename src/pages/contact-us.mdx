@@ -1,31 +1,71 @@
 <ContactUsStyle>
-<Banner banner={banner} />
-<div class="container">
-    <div class="main-content [&>p]:text-justify [&>p]:mb-3 [&>p]:text-md [&>p]:text-gray-700">
-        <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
-        <p >Thank you for your interest in contacting CircuitXperts. We are here to provide information about our services and products, answer general questions, and assist with your inquiries. However, we cannot offer medical advice or treatment recommendations.</p>
-        <p>If you have a question related to a specific service or require immediate assistance, please reach out to us using the contact information below.</p>
+  <Banner banner={banner} />
+  <div class="site-container">
+    <div class="main-content mt-5 mt-lg-0">
+      <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6">Contact Us</h2>
+      <div className="pt-lg-5 pt-4">
+        <p className="mb-2">Thank you for your interest in contacting CircuitXperts. We are here to
+        provide information about our services and products, answer general
+        questions, and assist with your inquiries. However, we cannot offer
+        medical advice or treatment recommendations.</p>
 
-        <div class="contact-info">
-            <div>
-                <h3>Phone</h3>
-                <Image src="https://picsum.photos/200/300" width={100} height={100}alt="Phone"/>
-                <p>Please call: [+91-9235916122]<br/>Monday-Friday, 9 AM - 5 PM ET</p>
-            </div>
-            <div>
-                <h3>Email</h3>
-                <Image src="https://picsum.photos/200/300" width={100} height={100} alt="Email"/>
-                <p>[info@circuitxperts.com]</p>
-            </div>
-            <div>
-                <h3>Address</h3>
-                <Image src="https://picsum.photos/200/300" width={100} height={100} alt="Address" />
-                <p>[Raipur raja, Jail Road Near Sent Johon School Bahraich, Uttar Pradesh 271801]</p>
-            </div>
+        <p className="mb-2">If you have a question related to a specific service or require
+        immediate assistance, please reach out to us using the contact
+        information below.</p>
+      </div>
+      <div className="contact-info d-flex py-4 py-lg-5">
+        <div>
+          <h3 className="mb-2 fw-bold text-link">Phone</h3>
+          <div className="d-flex m-0 gap-5 align-items-center phn-number">
+            <i className="bi bi-telephone icon"></i>
+            <Link href="tel:+91-9235916122" target="" className="phone">
+              +91-9235916122
+            </Link>
+          </div>
         </div>
+        <div>
+          <h3 className="mb-2 fw-bold text-link">Email</h3>
+          <div className="d-flex m-0 gap-5 align-items-center phn-email">
+            <i class="bi bi-envelope-at-fill icon"></i>
+            <Link
+              href="mailto:info@circuitxperts.com"
+              target=""
+              className="mail"
+            >
+              info@circuitxperts.com
+            </Link>
+          </div>
+        </div>
+        <div>
+          <h3 className="mb-2 fw-bold text-link">Address</h3>
+          <div className="d-flex m-0 gap-5 align-items-center phn-add">
+            <i className="bi bi-geo-alt-fill icon"></i>
+            <p className="fw-semibold text-address">Raipur raja, Jail Road Near Sent Johon School Bahraich, Uttar Pradesh 271801</p>
+          </div>
+        </div>
+      </div>
+      <div className="get-touch d-flex flex-column align-content-end text-center bg-primary text-white px-3 mb-3">
+        <div className="image-content d-flex flex-column flex-lg-row justify-content-center mt-4 mb-2 align-items-center gap-lg-10">
+          <img src="/images/Get-touch.png" alt="design-circuit" width="300" className="m-auto m-lg-0" />
+          <div>
+          <p className="fw-bold h2 py-3">Reach Out</p>
+          <p>We’re just a click away.</p>
+          </div>
+        </div>
+        <div className="content">
+          <hr className="my-4 border-5" />
+          Contact us for more information, support, or any inquiries. We’re always happy to assist.
+        </div>
+        <div className="button-content  my-4 ">
+          <Link  href="https://docs.google.com/forms/d/e/1FAIpQLSc5O4Jm0fxIMPLHH7TwLxW4yeRrJK7RSDs0AsGmzFUuiJcXEg/viewform?usp=sf_link"
+          target="_blank"
+          className="button btn">Get in Touch</Link>
+        </div>
+
+  </div>
     </div>
 
-</div>
+  </div>
 </ContactUsStyle>
 
 import Link from "next/link";
@@ -34,12 +74,12 @@ import Image from "next/image";
 import { ContactUsStyle } from "@/src/styles/contactstyle";
 import { Banner } from "@/src/components/Banner";
 import BannerImageD from "/public/images/Slide+2.jpg";
+import GetTouchImg from "/public/images/Get-touch.png";
 
 export const banner = {
   DImage: BannerImageD,
   MbImage: BannerImageD,
   bannerTitle: "Contact Us",
-  text: "Shape Your Future with Innovation and Impact.",
-  subtext: "",
+  text2: "Shape Your Future with Innovation and Impact.",
 };
 export default ({ children }) => <>{children}</>;

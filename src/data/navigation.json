@@ -56,19 +56,9 @@
   "topUtilityNav": {
     "links": [
       {
-        "title": "Kt website",
-        "href": "",
+        "title": "Get in Touch",
+        "href": "https://docs.google.com/forms/d/e/1FAIpQLSc5O4Jm0fxIMPLHH7TwLxW4yeRrJK7RSDs0AsGmzFUuiJcXEg/viewform?usp=sf_link",
         "target": "_blank"
-      },
-      {
-        "title": "Talk With Us",
-        "href": "",
-        "target": "_self"
-      },
-      {
-        "title": "Contact Us",
-        "href": "/contact-us",
-        "target": "_self"
       }
     ]
   }

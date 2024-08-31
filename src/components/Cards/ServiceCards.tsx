@@ -1,15 +1,16 @@
+import { CardStyles } from "./style";
+
 export const Card = (props: any) => {
   return (
-    <div className="flex w-96 mb-3 border !border-transparent rounded-lg p-3 transition-all duration-300 ease-in-out hover:!border-black flex-col gap-1">
-      <div className="flex items-center">
-        <img src={props.image} className="w-16" alt="image" />
-        <div className="text-lg font-semibold pl-6">{props.name}</div>
+    <div className="one-cards d-lg-flex">
+      <div className="card-content d-flex align-items-center gap-5">
+        <img src={props.image} className="w-16 images-icon" alt="image" />
+        <div className="head-text">{props.name}</div>
       </div>
-      <div className="text-sm text-justify text-gray-600">{props.desc}</div>
-      <a
-        href={props.link}
-        className="text-sm hover:no-underline text-black font-semibold"
-      >
+      <div className="card-description py-4 fw-semibold pe-lg-2 text-justify">
+        {props.desc}
+      </div>
+      <a href={props.link} className="show-card-link d-flex justify-center">
         Show Details
       </a>
     </div>
@@ -55,16 +56,18 @@ export const ServiceCards = () => {
     },
   ];
   return (
-    <div className="flex my-5 justify-around flex-wrap gap-3">
-      {arr.map((data, index) => (
-        <Card
-          image={data.image}
-          name={data.name}
-          desc={data.desc}
-          link={data.link}
-          key={index}
-        />
-      ))}
-    </div>
+    <CardStyles>
+      <div className="d-lg-flex my-4 justify-around flex-wrap gap-3 cards-section">
+        {arr.map((data, index) => (
+          <Card
+            image={data.image}
+            name={data.name}
+            desc={data.desc}
+            link={data.link}
+            key={index}
+          />
+        ))}
+      </div>
+    </CardStyles>
   );
 };

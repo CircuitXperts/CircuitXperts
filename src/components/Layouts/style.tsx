@@ -9,11 +9,7 @@ export const LayoutStyle = styled.div`
     padding-top: 95px;
 
     @media ${(props) => props.theme.device.lg} {
-      padding-top: 110px;
-    }
-
-    @media ${(props) => props.theme.device.xxl} {
-      padding-top: 111px;
+      padding-top: 120px;
     }
   }
 `;

@@ -21,7 +21,7 @@ export const UtilityMenu: React.FC<Props> = ({ menuLink }) => {
           as="ul"
           style={{ maxHeight: "100px" }}
         >
-          <li className="healthcare">
+          <li className="techcare">
             <em>For Professionals</em>
           </li>
           {menuLink?.topUtilityNav?.links.map((item, i) => (
