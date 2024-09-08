@@ -15,35 +15,41 @@ interface Props {
 export const Menu: React.FC<Props> = ({ menuLink }) => {
   const router = useRouter();
   const [expanded, setExpanded] = useState(false);
-
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
   const [showNavbar, setShowNavbar] = useState(true);
   const [isFixed, setIsFixed] = useState(false);
 
   const handleMouseEnter = (index: number) => {
-    setHoveredItem(index);
+    if (!isMobile) {
+      setHoveredItem(index);
+    }
   };
+
   const handleMouseLeave = () => {
-    setHoveredItem(null);
+    if (!isMobile) {
+      setHoveredItem(null);
+    }
   };
 
   const handleMenuClick = () => {
     setHoveredItem(null);
   };
+
   const handleOnClick = () => {
     if (showNavbar) setShowNavbar(false);
   };
+
   const handleDropdownClick = (index: number) => {
     if (hoveredItem === index) {
-      handleMouseLeave();
+      setHoveredItem(null);
     } else {
-      handleMouseEnter(index);
+      setHoveredItem(index);
     }
   };
 
   useEffect(() => {
+    setExpanded(false); // Close the menu on route change
     handleMenuClick();
-    handleOnClick();
   }, [router.pathname]);
 
   useEffect(() => {
@@ -99,84 +105,81 @@ export const Menu: React.FC<Props> = ({ menuLink }) => {
             </Navbar.Toggle>
             <Navbar.Collapse id="navbarScroll" className="navigation-menu">
               <div className="navigation-menu-inner">
-                <div>
-                  <Nav
-                    className="mx-auto my-2 my-lg-0 justify-content-center align-items-center"
-                    as="ul"
-                    navbarScroll
-                  >
-                    <li className="nav-item">
-                      <Link
-                        href="/"
-                        className="d-lg-none nav-item"
+                <Nav
+                  className="mx-auto my-2 my-lg-0 justify-content-center align-items-center"
+                  as="ul"
+                  navbarScroll
+                >
+                  <li className="nav-item">
+                    <Link
+                      href="/"
+                      className="d-lg-none nav-item"
+                      onClick={() => setExpanded(false)}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  {menuLink?.mainNav?.links.map((item, index) => {
+                    return item.subMenu ? (
+                      <NavDropdown
+                        key={index}
+                        title={
+                          <span
+                            dangerouslySetInnerHTML={{ __html: item.title }}
+                          />
+                        }
+                        id={`navbar-mainnav-dropdown-${index}`}
+                        show={hoveredItem === index}
+                        onMouseEnter={() => handleMouseEnter(index)}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={() => {
+                          isMobile && handleDropdownClick(index);
+                        }}
+                        className={`${item.class ? item.class : ""}${
+                          item.subMenu.some(
+                            (subItem) => subItem.href === router.pathname
+                          )
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        {item.subMenu.map((link, subIndex) => (
+                          <NavDropdown.Item
+                            as={Link}
+                            href={link.href}
+                            key={subIndex}
+                            className={
+                              router.pathname === link.href ? "active" : ""
+                            }
+                            onClick={() => {
+                              handleOnClick();
+                              handleMenuClick();
+                              setExpanded(false); // Close the menu after click
+                            }}
+                          >
+                            {link.title}
+                          </NavDropdown.Item>
+                        ))}
+                      </NavDropdown>
+                    ) : (
+                      <Nav.Item
+                        as="li"
+                        key={index}
+                        className={item.class || ""}
                         onClick={() => setExpanded(false)}
                       >
-                        Home
-                      </Link>
-                    </li>
-                    {menuLink?.mainNav?.links.map((item, index) => {
-                      return item.subMenu ? (
-                        <NavDropdown
-                          key={index}
-                          title={
-                            <span
-                              dangerouslySetInnerHTML={{ __html: item.title }}
-                            />
+                        <Link
+                          href={item.href}
+                          className={
+                            router.pathname === item.href ? "active" : ""
                           }
-                          id={`navbar-mainnav-dropdown-${index}`}
-                          show={hoveredItem === index}
-                          onMouseEnter={() => handleMouseEnter(index)}
-                          onMouseLeave={() => handleMouseLeave()}
-                          onClick={() => {
-                            isMobile && handleDropdownClick(index);
-                          }}
-                          className={`${item.class ? item.class : ""}${
-                            item.subMenu.some(
-                              (subItem) => subItem.href === router.pathname
-                            )
-                              ? "active"
-                              : ""
-                          }`}
                         >
-                          {item.subMenu.map((link, subIndex) => {
-                            return (
-                              <NavDropdown.Item
-                                as={Link}
-                                href={link.href}
-                                key={subIndex}
-                                className={
-                                  router.pathname === link.href ? "active" : ""
-                                }
-                                onClick={() => {
-                                  handleOnClick();
-                                  handleMenuClick();
-                                }}
-                              >
-                                {link.title}
-                              </NavDropdown.Item>
-                            );
-                          })}
-                        </NavDropdown>
-                      ) : (
-                        <Nav.Item
-                          as="li"
-                          key={index}
-                          className={item.class || ""}
-                          onClick={() => setExpanded(false)}
-                        >
-                          <Link
-                            href={item.href}
-                            className={
-                              router.pathname === item.href ? "active" : ""
-                            }
-                          >
-                            {item.title}
-                          </Link>
-                        </Nav.Item>
-                      );
-                    })}
-                  </Nav>
-                </div>
+                          {item.title}
+                        </Link>
+                      </Nav.Item>
+                    );
+                  })}
+                </Nav>
                 <div className="d-lg-none mobile-utility-menu">
                   <ul>
                     {menuLink?.topUtilityNav?.links.map((item, i) => (
