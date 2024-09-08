@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const IntegrityPageStyle = styled.div`
+  .text-sub {
+    font-size: 20px;
+    font-family: ${(props) => props.theme.font.barlowBold};
+    color: ${(props) => props.theme.color.blue};
+  }
+
   .banner-wrapper {
     .banner-text {
       .banner-wrap {

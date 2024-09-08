@@ -1,20 +1,26 @@
 <IntegrityPageStyle>
-<Banner banner={banner} />
-<div className="integrity-analysis-page">
-  <div className="w-[90%] mx-auto pi-container ">
-      <div className="main-content">
-          <h2>Power Integrity (PI) Analysis</h2>
-          <p>At CircuitXperts, we specialize in Power Integrity (PI) analysis to ensure the reliable performance and efficiency of your power distribution networks. Our PI analysis services help identify and mitigate issues related to power delivery, ensuring your designs meet performance and reliability standards.</p>
-
-          <div className="pi-analysis">
-          {
-            data.map((item, index) => <PageCard key={index} {...item} />)
-          }
-          </div>
+  <Banner banner={banner} />
+  <div className="integrity-analysis-page">
+    <div className="site-container">
+      <div className="main-content pb-5">
+        <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6 pt-5">
+          Power Integrity (PI) Analysis
+        </h2>
+        <div className="py-2 py-lg-3">
+          At CircuitXperts, we specialize in Power Integrity (PI) analysis to
+          ensure the reliable performance and efficiency of your power
+          distribution networks. Our PI analysis services help identify and
+          mitigate issues related to power delivery, ensuring your designs meet
+          performance and reliability standards.
+        </div>
+        <div className="pi-analysis">
+          {data.map((item, index) => (
+            <PageCard key={index} {...item} />
+          ))}
+        </div>
       </div>
-
+    </div>
   </div>
-</div>
 </IntegrityPageStyle>
 
 import Link from "next/link";

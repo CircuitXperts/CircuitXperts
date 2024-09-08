@@ -52,23 +52,6 @@ export const ContactUsStyle = styled.div`
     }
 
     .get-touch {
-      .image-left {
-        width: 250px;
-      }
-
-      .touch-content {
-        .head-text {
-        }
-
-        .subtext {
-        }
-
-        .description {
-        }
-      }
-    }
-
-    .get-touch {
       .button-content {
         .button {
           background: linear-gradient(to bottom right, #ef4765, #ff9a5a);

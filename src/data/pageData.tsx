@@ -42,7 +42,8 @@ const data = [
   {
     imageUrl: "",
     imageAlt: "",
-    title: "Signal Integrity (SI) Analysis",
+    title:
+      "<div class='pb-2 fw-bold h3 text-orange pt-lg-6 pt-5'>Signal Integrity (SI) Analysis</div>",
     description:
       "At CircuitXperts, we specialize in Signal Integrity (SI) analysis to ensure the reliable performance of high-speed digital designs. Our expertise in SI analysis helps identify and mitigate issues related to signal degradation, ensuring optimal performance and reliability of your electronic systems.",
     points: [],

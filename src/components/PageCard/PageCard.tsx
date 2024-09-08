@@ -1,9 +1,6 @@
 import React from "react";
-import Image from "next/image";
 
 interface AnalysisProps {
-  imageUrl: string;
-  imageAlt: string;
   title: string;
   description: string;
   points: string[];
@@ -11,8 +8,6 @@ interface AnalysisProps {
 }
 
 export const PageCard: React.FC<AnalysisProps> = ({
-  imageUrl,
-  imageAlt,
   title,
   description,
   points,
@@ -22,24 +17,18 @@ export const PageCard: React.FC<AnalysisProps> = ({
     <>
       <hr className="my-5" />
       <div className="analysis">
-        <div className="md:flex gap-4 items-center">
-          <Image
-            src={imageUrl}
-            className="w-56 h-64"
-            width={300}
-            height={400}
-            alt={imageAlt}
-          />
-          <div className="analysis-description">
-            <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-            <p className="text-sm mb-2">{description}</p>
-            <ul className="text-sm [&>li]:mb-1">
-              {points.map((point, index) => (
-                <li key={index}>{point}</li>
-              ))}
-            </ul>
-            <p className="text-sm text-opacity-80">{footerText}</p>
-          </div>
+        <div className="analysis-description">
+          <h3
+            className="text-sub"
+            dangerouslySetInnerHTML={{ __html: title }}
+          ></h3>
+          <p className="pt-2 pt-lg-3 pb-1">{description}</p>
+          <ul className="text-sm [&>li]:mb-1">
+            {points.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+          <p className="pt-1">{footerText}</p>
         </div>
       </div>
     </>

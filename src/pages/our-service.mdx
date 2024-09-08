@@ -1,58 +1,23 @@
- <OurServiceStyle>
- <div className="container">
-      <div className="main-content">
-          <h2>Our Services</h2>
-          <p>At CircuitXperts, we offer a comprehensive range of services to meet the diverse needs of our clients. Our expertise spans across various domains, ensuring that we provide top-notch solutions that are efficient, reliable, and tailored to your specific requirements.</p>
-
-    <div class="services">
-      <a href="/si-analysis" class="service">
-        <h3>SI Analysis</h3>
-        <p>We provide thorough SI analysis to ensure signal integrity in high-speed designs.</p>
-      </a>
-
-      <a href="/pi-analysis" class="service">
-        <h3>PI Analysis</h3>
-        <p>Comprehensive analysis of power integrity for robust power distribution networks.</p>
-      </a>
-
-      <a href="/pcb-manufacturing" class="service">
-        <h3>PCB Manufacturing</h3>
-        <p>Expert PCB fabrication ensuring high-quality electronic products.</p>
-      </a>
-
-      <a href="/pcb-assembly" class="service">
-        <h3>PCB Assembly</h3>
-        <p>Professional PCB assembly services for complete electronic solutions.</p>
-      </a>
-
-      <a href="/test-code" class="service">
-        <h3>Test Code</h3>
-        <p>Development and implementation of reliable test code for thorough product testing.</p>
-      </a>
-
-      <a href="/embedded-software" class="service">
-        <h3>Embedded Software</h3>
-        <p>Customized embedded software solutions for diverse industrial applications.</p>
-      </a>
-
-      <a href="/ip-core" class="service">
-        <h3>IP Core</h3>
-        <p>Development and integration of IP cores tailored to specific hardware platforms.</p>
-      </a>
-
-      <a href="/testing" class="service">
-        <h3>Testing</h3>
-        <p>Comprehensive testing services to ensure product reliability and performance.</p>
-      </a>
-    </div>
+<OurServiceStyle>
+  <div className="site-container">
+    <div className="main-content">
+      <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6 pt-5">Our Services</h2>
+      <div className=" pt-2 pt-lg-3 pb-2">
+        At CircuitXperts, we offer a comprehensive range of services to meet the
+        diverse needs of our clients. Our expertise spans across various
+        domains, ensuring that we provide top-notch solutions that are
+        efficient, reliable, and tailored to your specific requirements.
       </div>
-
+      <div className="services">
+        <ServiceCards />
+      </div>
+    </div>
   </div>
-  </OurServiceStyle>
+</OurServiceStyle>
 
 import Link from "next/link";
 import { Layouts } from "@/src/components/Layouts";
 import { OurServiceStyle } from "@/src/styles/ourservice";
-import Image from "next/image";
+import { ServiceCards } from "@/src/components/Cards";
 
 export default ({ children }) => <>{children}</>;
