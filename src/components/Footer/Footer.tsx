@@ -66,8 +66,7 @@ export const Footer: React.FC = () => {
         </div>
       </FooterLinkStyle>
       <div className="bg-[#222] text-white p-3 !text-base text-center">
-        &copy; {new Date().getFullYear()} CircuitXperts | Designed by
-        CircuitXperts
+        &copy; {new Date().getFullYear()} CircuitXperts | All Rights Reserved
       </div>
     </Container>
   );
