@@ -2,7 +2,26 @@
   <PageNotFound />
 </div>
 
+<NextSeo
+  title="Page Not Found | CircuitXOurperts"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  canonical={process.env.NXT_SITE_URL + "/404/"}
+  openGraph={{
+    url: process.env.NXT_SITE_URL + "/404/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+  twitter={{
+    url: process.env.NXT_SITE_URL + "/404/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
 import { Layouts } from "@/src/components/Layouts";
 import { PageNotFound } from "@/src/components/PageNot";
+import { NextSeo } from "next-seo";
 
 export default ({ children }) => <>{children}</>;

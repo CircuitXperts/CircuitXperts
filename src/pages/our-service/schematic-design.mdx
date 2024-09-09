@@ -1,42 +1,103 @@
 <SchematicStyle>
-<Banner banner={banner} />
-<div className="site-container">
-  <div className="main-content my-5 my-lg-6">
-      <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6">Schematic Design Overview</h2>
+  <Banner banner={banner} />
+  <div className="site-container">
+    <div className="main-content my-5 my-lg-6">
+      <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6">
+        Schematic Design Overview
+      </h2>
       <div className="pt-4 pt-lg-5 first-section">
         <p className="head-text pb-1">What is Schematic Design?</p>
-        <p className=" mt-4 mt-lg-5">Schematic design is a crucial phase in electronic circuit design where the
-          structure and connections of a circuit are defined using standardized
-          symbols. It serves as a blueprint for creating electronic circuits and is
-          essential for design, testing, and manufacturing.</p>
+        <p className=" mt-4 mt-lg-5">
+          Schematic design is a crucial phase in electronic circuit design where
+          the structure and connections of a circuit are defined using
+          standardized symbols. It serves as a blueprint for creating electronic
+          circuits and is essential for design, testing, and manufacturing.
+        </p>
       </div>
       <div className="key-comp mt-5 mt-lg-6">
         <h2 className="head-text pb-1">Key Components</h2>
         <ul className="mt-4 mt-lg-5">
-          <li><strong>Component Symbols:</strong> Symbols represent electronic components such as resistors, capacitors, and integrated circuits (ICs).</li>
-          <li><strong>Connections:</strong> Nets and buses show how components are electrically connected.</li>
-          <li><strong>Annotations:</strong> Labels and values that provide details about components, like resistance or capacitance.</li>
-          <li><strong>Design Rules:</strong> Electrical Rules Check (ERC) ensures the schematic adheres to design standards and constraints.</li>
+          <li>
+            <strong>Component Symbols:</strong> Symbols represent electronic
+            components such as resistors, capacitors, and integrated circuits
+            (ICs).
+          </li>
+          <li>
+            <strong>Connections:</strong> Nets and buses show how components are
+            electrically connected.
+          </li>
+          <li>
+            <strong>Annotations:</strong> Labels and values that provide details
+            about components, like resistance or capacitance.
+          </li>
+          <li>
+            <strong>Design Rules:</strong> Electrical Rules Check (ERC) ensures
+            the schematic adheres to design standards and constraints.
+          </li>
         </ul>
       </div>
       <div className="design-process mt-5 mt-lg-6">
         <h2 className="head-text pb-1">How to Create a Schematic Design</h2>
         <ol className="mt-4 mt-lg-5">
-          <li><strong>Gather Requirements:</strong> Understand the circuit requirements and specifications before starting the design.</li>
-          <li><strong>Create Component Symbols:</strong> Draw or select symbols for all electronic components using a schematic design tool.</li>
-          <li><strong>Place Components:</strong> Position the symbols on the schematic sheet according to the circuit layout.</li>
-          <li><strong>Connect Components:</strong> Use nets to draw connections between the components, ensuring the correct electrical pathways.</li>
-          <li><strong>Annotate the Design:</strong> Add labels and values to each component to provide necessary details and facilitate understanding.</li>
-          <li><strong>Verify the Design:</strong> Perform Electrical Rules Check (ERC) to ensure there are no design errors or rule violations.</li>
-          <li><strong>Simulate the Circuit:</strong> Use simulation tools to test the circuit behavior and validate its performance before physical implementation.</li>
-          <li><strong>Document the Design:</strong> Generate documentation for the schematic to serve as a reference for assembly, testing, and future modifications.</li>
+          <li>
+            <strong>Gather Requirements:</strong> Understand the circuit
+            requirements and specifications before starting the design.
+          </li>
+          <li>
+            <strong>Create Component Symbols:</strong> Draw or select symbols
+            for all electronic components using a schematic design tool.
+          </li>
+          <li>
+            <strong>Place Components:</strong> Position the symbols on the
+            schematic sheet according to the circuit layout.
+          </li>
+          <li>
+            <strong>Connect Components:</strong> Use nets to draw connections
+            between the components, ensuring the correct electrical pathways.
+          </li>
+          <li>
+            <strong>Annotate the Design:</strong> Add labels and values to each
+            component to provide necessary details and facilitate understanding.
+          </li>
+          <li>
+            <strong>Verify the Design:</strong> Perform Electrical Rules Check
+            (ERC) to ensure there are no design errors or rule violations.
+          </li>
+          <li>
+            <strong>Simulate the Circuit:</strong> Use simulation tools to test
+            the circuit behavior and validate its performance before physical
+            implementation.
+          </li>
+          <li>
+            <strong>Document the Design:</strong> Generate documentation for the
+            schematic to serve as a reference for assembly, testing, and future
+            modifications.
+          </li>
         </ol>
       </div>
+    </div>
   </div>
-</div>
-
 </SchematicStyle>
 
+<NextSeo
+  title="Schematic Design | CircuitXperts"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  canonical={process.env.NXT_SITE_URL + "/schematic-design/"}
+  openGraph={{
+    url: process.env.NXT_SITE_URL + "/schematic-design/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+  twitter={{
+    url: process.env.NXT_SITE_URL + "/schematic-design/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { Layouts } from "@/src/components/Layouts";
 import Image from "next/image";

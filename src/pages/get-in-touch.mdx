@@ -2,6 +2,25 @@
   <ContactUs />
 </div>
 
+<NextSeo
+  title="Get In Touch | CircuitXperts"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  canonical={process.env.NXT_SITE_URL + "/get-in-touch/"}
+  openGraph={{
+    url: process.env.NXT_SITE_URL + "/get-in-touch/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+  twitter={{
+    url: process.env.NXT_SITE_URL + "/get-in-touch/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
+import { NextSeo } from "next-seo";
 import { Layouts } from "@/src/components/Layouts";
 import { ContactUs } from "@/src/components/Contact";
 

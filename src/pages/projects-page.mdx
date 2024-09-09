@@ -1,15 +1,42 @@
-  <ProjectStyle>
-  <div className="site-container">
-      <div className="main-content mt-5 mt-lg-0">
-          <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6">Our Projects</h2>
-          <p className="pt-4 pt-lg-5">At CircuitXperts, we pride ourselves on delivering innovative and high-quality projects. Here are some of our recent projects that showcase our expertise in FPGA design, SI Analysis, PI, PCB Manufacturing, PCB Assembly, Test Code, Embedded Software, IP Core, and testing.</p>
-          <div className="mt-3 text-center">
-            <h2 className="h2 mt-3 mb-5 text-center"> This Page is Inprogress</h2>{" "}
-          </div>
-      </div>
-  </div>
-  </ProjectStyle>
+{" "}
 
+<ProjectStyle>
+  <div className="site-container">
+    <div className="main-content mt-5 mt-lg-0">
+      <h2 className="pb-2 fw-bold h3 text-orange pt-lg-6">Our Projects</h2>
+      <p className="pt-4 pt-lg-5">
+        At CircuitXperts, we pride ourselves on delivering innovative and
+        high-quality projects. Here are some of our recent projects that
+        showcase our expertise in FPGA design, SI Analysis, PI, PCB
+        Manufacturing, PCB Assembly, Test Code, Embedded Software, IP Core, and
+        testing.
+      </p>
+      <div className="mt-3 text-center">
+        <h2 className="h2 mt-3 mb-5 text-center"> This Page is Inprogress</h2>{" "}
+      </div>
+    </div>
+  </div>
+</ProjectStyle>
+
+<NextSeo
+  title="Projects | CircuitXperts"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  canonical={process.env.NXT_SITE_URL + "/projects-page/"}
+  openGraph={{
+    url: process.env.NXT_SITE_URL + "/projects-page/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+  twitter={{
+    url: process.env.NXT_SITE_URL + "/projects-page/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { Carousel } from "@/src/components/Carousel";
 import { Layouts } from "@/src/components/Layouts";

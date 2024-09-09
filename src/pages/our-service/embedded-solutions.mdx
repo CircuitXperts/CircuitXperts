@@ -148,6 +148,25 @@
 </div>
 </EmbeddedStyle>
 
+<NextSeo
+  title="Embedded Solutions | CircuitXperts"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  canonical={process.env.NXT_SITE_URL + "/embedded-solutions/"}
+  openGraph={{
+    url: process.env.NXT_SITE_URL + "/embedded-solutions/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+  twitter={{
+    url: process.env.NXT_SITE_URL + "/embedded-solutions/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { Layouts } from "@/src/components/Layouts";
 import { EmbeddedStyle } from "@/src/styles/embeddedsoftware";

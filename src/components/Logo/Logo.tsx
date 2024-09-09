@@ -1,5 +1,5 @@
 import React from "react";
-import LogoImage from "/public/images/circuit-xperts-logo-01-cropped.svg";
+import LogoImage from "/public/images/circuit-xperts-logo.svg";
 import Image from "next/image";
 import { LogoStyle } from "./styles";
 import Link from "next/link";
