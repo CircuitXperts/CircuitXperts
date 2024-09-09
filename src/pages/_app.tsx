@@ -20,16 +20,16 @@ export default function App({ Component, pageProps }: AppProps) {
       <DefaultSeo
         title="CircuitXperts | Electronic Design and Manufacturing Solutions"
         description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
-        canonical={router.asPath}
+        canonical={process.env.NXT_SITE_URL + router.asPath}
         openGraph={{
-          url: router.asPath,
+          url: process.env.NXT_SITE_URL + router.asPath,
           title:
             "CircuitXperts | Electronic Design and Manufacturing Solutions",
           description:
             "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
           images: [
             {
-              url: "/images/circuit-xperts-logo.svg",
+              url: process.env.NXT_SITE_URL + "/images/circuit-xperts-logo.svg",
               width: 180,
               height: 72,
               alt: "Logo",
