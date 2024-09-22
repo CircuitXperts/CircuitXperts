@@ -1,20 +1,23 @@
 // components/Carousel.js
-import Slider from 'react-slick';
+import Slider from "react-slick";
 import Image from "next/image";
 import React from "react";
-import {ArrowLeftCircleIcon, ArrowRightCircleIcon} from '@heroicons/react/24/outline';
+import {
+  ArrowLeftCircleIcon,
+  ArrowRightCircleIcon,
+} from "@heroicons/react/24/outline";
 import { CarouselStyle } from "./styles";
 
-const PrevArrow = (props: { onClick: any; }) => {
+const PrevArrow = (props: { onClick: any }) => {
   const { onClick } = props;
   return (
     <div className="prv-cls d-lg-block d-none cursor-pointer" onClick={onClick}>
-      <ArrowLeftCircleIcon className="hover:!text-gray-500  text-white w-100"/>
-     </div>
+      <ArrowLeftCircleIcon className="hover:!text-gray-500  text-white w-100" />
+    </div>
   );
 };
 
-const NextArrow = (props: { onClick: any; }) => {
+const NextArrow = (props: { onClick: any }) => {
   const { onClick } = props;
   return (
     <div className="nxt-cls d-lg-block d-none cursor-pointer" onClick={onClick}>
@@ -22,7 +25,6 @@ const NextArrow = (props: { onClick: any; }) => {
     </div>
   );
 };
-
 
 export const Carousel = () => {
   const settings = {
@@ -34,7 +36,7 @@ export const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     prevArrow: <PrevArrow onClick={undefined} />,
-    nextArrow: <NextArrow onClick={undefined} />
+    nextArrow: <NextArrow onClick={undefined} />,
   };
 
   const images = [
@@ -46,15 +48,22 @@ export const Carousel = () => {
 
   return (
     <CarouselStyle>
-    <div className="carousel mb-10">
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className='image-div'>
-            <Image src={image} layout="responsive" width={800} height={200} alt={`Slide ${index + 1}`}  className="carousel-img" />
-          </div>
-        ))}
-      </Slider>
-    </div>
+      <div className="carousel mb-10">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} className="image-div">
+              <Image
+                src={image}
+                layout="responsive"
+                width={800}
+                height={200}
+                alt={`Slide ${index + 1}`}
+                className="carousel-img"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </CarouselStyle>
   );
 };

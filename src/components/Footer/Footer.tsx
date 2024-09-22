@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
               <i className="bi text-2xl bi-twitter-x"></i>
             </a>
             <a href="#">
-              <i className="bi text-2xl bi-facebook"></i>
+              <i className="bi text-2xl bi-linkedin"></i>
             </a>
           </div>
         </div>

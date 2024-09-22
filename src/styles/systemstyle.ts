@@ -20,7 +20,7 @@ export const SystemPageStyle = styled.div`
           top: 0;
 
           @media ${(props) => props.theme.device.lg} {
-            padding: 157px 0 77px;
+            padding: 220px 0 77px;
             margin: 0 auto;
           }
 

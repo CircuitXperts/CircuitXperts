@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomePageStyle = styled.div`
   .home-content {
-    max-width: 1364px;
+    max-width: 1216px;
     margin: 0 auto;
 
     .design-circuit {

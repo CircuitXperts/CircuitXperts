@@ -15,7 +15,7 @@ export const BannerStyle = styled.div`
         width: 100%;
 
         @media ${(props) => props.theme.device.lg} {
-          height: 300px;
+          height: 400px;
         }
       }
     }
@@ -64,7 +64,7 @@ export const BannerStyle = styled.div`
     }
 
     .heading-wrap {
-      top: 25%;
+      top: 20%;
 
       .site-container {
         padding: 0;
