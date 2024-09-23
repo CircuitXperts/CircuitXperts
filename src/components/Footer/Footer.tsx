@@ -59,7 +59,10 @@ export const Footer: React.FC = () => {
             <a href="#">
               <i className="bi text-2xl bi-twitter-x"></i>
             </a>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/in/circuit-xperts/"
+              target="_blank"
+            >
               <i className="bi text-2xl bi-linkedin"></i>
             </a>
           </div>
