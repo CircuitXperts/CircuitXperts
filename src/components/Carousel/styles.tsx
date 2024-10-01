@@ -53,9 +53,9 @@ export const CarouselStyle = styled.div`
 
     .banner-text {
       .carousel-text {
-        font-size: 35px;
+        font-size: 20px;
         padding: 0 30px;
-        top: 20%;
+        top: 40%;
         position: relative;
         line-height: normal;
         color: #fc6850;
@@ -63,7 +63,8 @@ export const CarouselStyle = styled.div`
 
         @media ${(props) => props.theme.device.lg} {
           padding: 0 130px;
-          top: 30%;
+          top: 42%;
+          font-size: 24px;
         }
       }
     }
