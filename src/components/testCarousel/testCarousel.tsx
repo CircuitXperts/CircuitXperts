@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { TestStyle } from "./styles";
-
 
 export const TestCarousel: React.FC = () => {
   const messages = [
     "Empower Your Business with Innovative Electronic Design",
-    "Unlock the Potential of Electronics to Transform Your Business"
+    "Unlock the Potential of Electronics to Transform Your Business",
+    "Expert team with extensive experience in electronic design and manufacturing.",
+    "Committed to meeting the highest standards of quality and performance.",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,19 +18,21 @@ export const TestCarousel: React.FC = () => {
 
     return () => clearInterval(interval); // Clean up on unmount
   }, []);
-  
+
   return (
     <TestStyle>
-    <div className="carousel">
-      <div className="carousel-content" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {messages.map((message, index) => (
-          <div className="carousel-item" key={index}>
-            {message}
-          </div>
-        ))}
+      <div className="carousel">
+        <div
+          className="carousel-content"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {messages.map((message, index) => (
+            <div className="carousel-item" key={index}>
+              {message}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </TestStyle>
   );
 };
-
