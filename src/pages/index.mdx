@@ -38,6 +38,16 @@
 
 </HomePageStyle>
 
+<NextSeo
+  title="CircuitXperts | Electronic Design and Manufacturing Solutions"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  openGraph={{
+    title: "CircuitXperts | Electronic Design and Manufacturing Solutions",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
 import Link from "next/link";
 import { Carousel } from "@/src/components/Carousel";
 import { Layouts } from "@/src/components/Layouts";
@@ -46,5 +56,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { TestCarousel } from "@/src/components/testCarousel";
 import { ServiceCards } from "@/src/components/Cards";
+import { NextSeo } from "next-seo";
 
 export default ({ children }) => <>{children}</>;
