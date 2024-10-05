@@ -17,7 +17,15 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <title>
+          CircuitXperts | Electronic Design and Manufacturing Solutions
+        </title>
+        <meta
+          name="description"
+          content="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+        />
+        <link rel="canonical" href="https://www.circuitxperts.com" />
       </Head>
       <DefaultSeo
         title="CircuitXperts | Electronic Design and Manufacturing Solutions"
