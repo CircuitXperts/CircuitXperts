@@ -36,6 +36,9 @@ export const Footer: React.FC = () => {
               <li>
                 <a href="/contact-us">Contact</a>
               </li>
+              <li>
+                <a href="/sitemap">Sitemap</a>
+              </li>
             </ul>
           </div>
           <div className="">

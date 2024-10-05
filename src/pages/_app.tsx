@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DefaultSeo } from "next-seo";
+import { Provider } from "react-redux";
+import { store } from "../store";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -38,11 +40,13 @@ export default function App({ Component, pageProps }: AppProps) {
           ],
         }}
       />
-      <BreakpointProvider>
-        <Layouts>
-          <Component {...pageProps} />
-        </Layouts>
-      </BreakpointProvider>
+      <Provider store={store}>
+        <BreakpointProvider>
+          <Layouts>
+            <Component {...pageProps} />
+          </Layouts>
+        </BreakpointProvider>
+      </Provider>
     </>
   );
 }

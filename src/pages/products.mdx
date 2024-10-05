@@ -1,0 +1,50 @@
+<ProductStyle>
+  <Banner banner={banner} />
+  <div className="product-content">
+    <ProductsPage />
+
+    my cart
+
+    <CartPage />
+
+  </div>
+</ProductStyle>
+
+<NextSeo
+  title="Design My Circuit | CircuitXperts"
+  description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  canonical={process.env.NXT_SITE_URL + "/product-cost/"}
+  openGraph={{
+    url: process.env.NXT_SITE_URL + "/product-cost/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+  twitter={{
+    url: process.env.NXT_SITE_URL + "/product-cost/",
+    title: "CircuitXperts | Electronic Design Website",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
+import { NextSeo } from "next-seo";
+import Link from "next/link";
+import { Layouts } from "@/src/components/Layouts";
+import { ProductStyle } from "@/src/styles/productstyle";
+import Image from "next/image";
+import { Banner } from "@/src/components/Banner";
+import BannerImageD from "/public/images/Slide+2.jpg";
+import { ProductsPage } from "@/src/components/Products/products";
+import { CartPage } from "@/src/components/Cart/Cart";
+
+export const banner = {
+  DImage: BannerImageD,
+  MbImage: BannerImageD,
+  bannerTitle: "Design My Circuit",
+  text2: "CircuitXperts is a cutting-edge technology company",
+};
+
+export default ({ children }) => <>{children}</>;
+
+;

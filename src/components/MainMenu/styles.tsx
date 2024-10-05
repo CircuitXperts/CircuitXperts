@@ -184,6 +184,7 @@ export const MenuStyle = styled.div`
 
     &.navbar-collapse {
       justify-content: flex-end;
+      visibility: visible;
 
       &.show {
         position: relative;

@@ -1,0 +1,116 @@
+<SiteMapStyle>
+<Banner banner={banner} />
+  <div class="page-wrapper site-container">
+    <div class="content-block">
+      <Link class="m-0 text-headline" href="/">
+        Home
+      </Link>
+    </div>
+    <div class="content-block">
+      <Link class="m-0 text-headline" href="/about-us">
+        About Us
+      </Link>
+    </div>
+    <div class="content-block">
+      <Link class="m-0 text-headline" href="/our-service">
+        Services
+      </Link>
+    </div>
+    <div class="page-list-block">
+      <div class="content-block">
+        <div class="m-0 text-headline clinical no-underline">
+          Services
+        </div>
+      </div>
+      <div class="inner-block">
+        <div class="inner-content-block">
+          <Link class="m-0 inner-items" href="/our-service/schematic-design">
+            Schematic Design
+          </Link>
+        </div>
+        <div class="inner-content-block">
+          <Link class="m-0 inner-items" href="/our-service/pcb-solutions">
+            PCB Solutions
+          </Link>
+        </div>
+        <div class="inner-content-block">
+          <Link class="m-0 inner-items" href="/our-service/integrity-analysis">
+            Integrity Analysis
+          </Link>
+        </div>
+        <div class="inner-content-block">
+          <Link class="m-0 inner-items" href="/our-service/system-validation">
+           System Validation
+          </Link>
+        </div>
+        <div class="inner-content-block">
+          <Link class="m-0 inner-items" href="/our-service/embedded-solutions">
+            Embedded Solutions
+          </Link>
+        </div>
+        <div class="inner-content-block">
+          <Link class="m-0 inner-items" href="/our-service/programming">
+            Programming
+          </Link>
+        </div>
+      </div>
+    </div>
+      <div class="last-block">
+        <div class="content-block">
+          <Link class="m-0 text-headline" href="/projects-page">
+          Projects
+          </Link>
+        </div>
+        <div class="content-block">
+          <Link class="m-0 text-headline" href="/design-my-circuit">
+            Design My Circuit
+          </Link>
+        </div>
+        <div class="content-block">
+          <Link class="m-0 text-headline" href="/careers">
+            Careers
+          </Link>
+        </div>
+        <div class="content-block">
+          <Link class="m-0 text-headline" href="/contact-us">
+            Contact Us
+          </Link>
+        </div>
+        <div class="content-block">
+          <Link class="m-0 text-headline" href="get-in-touch">
+           Get in Touch
+          </Link>
+        </div>
+      </div>
+  </div>
+
+</SiteMapStyle>
+
+<NextSeo
+  title="CircuitXperts | Electronic Design and Manufacturing Solutions"
+  description="View the sitemap provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
+  openGraph={{
+    title: "CircuitXperts | Electronic Design and Manufacturing Solutions",
+    description:
+      "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+  }}
+/>
+
+import Link from "next/link";
+import { SiteMapStyle } from "@/src/styles/sitemapStyle.ts";
+import { NextSeo } from "next-seo";
+import { Layouts } from "@/src/components/Layouts";
+import { Banner } from "@/src/components/Banner";
+import BannerImageD from "/public/images/Slide+2.jpg";
+
+export const banner = {
+  DImage: BannerImageD,
+  MbImage: BannerImageD,
+  bannerTitle: "Sitemap",
+  text2:
+    "Feel free to explore our services, learn more about us, and get in touch",
+};
+
+export default ({ children }) => <>{children}</>;
+
+;
