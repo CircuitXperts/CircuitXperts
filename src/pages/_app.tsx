@@ -26,6 +26,34 @@ export default function App({ Component, pageProps }: AppProps) {
           content="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
         />
         <link rel="canonical" href="https://www.circuitxperts.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="CircuitXperts | Electronic Design and Manufacturing Solutions"
+        />
+        <meta
+          property="og:description"
+          content="FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts"
+        />
+        <meta property="og:url" content="https://www.circuitxperts.com" />
+        <meta
+          property="og:image"
+          content="https://www.circuitxperts.com/images/circuit-xperts-logo.svg"
+        />{" "}
+        <meta property="og:site_name" content="CircuitXperts" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="CircuitXperts | Electronic Design and Manufacturing Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.circuitxperts.com/images/circuit-xperts-logo.svg"
+        />
       </Head>
       <DefaultSeo
         title="CircuitXperts | Electronic Design and Manufacturing Solutions"
