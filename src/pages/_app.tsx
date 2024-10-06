@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { DefaultSeo } from "next-seo";
 import { Provider } from "react-redux";
 import { store } from "../store";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -18,29 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <title>
-          CircuitXperts | Electronic Design and Manufacturing Solutions
-        </title>
-        <meta
-          name="description"
-          content="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
-        />
-        <link rel="canonical" href="https://www.circuitxperts.com" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="CircuitXperts | Electronic Design and Manufacturing Solutions"
-        />
-        <meta
-          property="og:description"
-          content="FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts"
-        />
-        <meta property="og:url" content="https://www.circuitxperts.com" />
-        <meta
-          property="og:image"
-          content="https://www.circuitxperts.com/images/circuit-xperts-logo.svg"
-        />{" "}
-        <meta property="og:site_name" content="CircuitXperts" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -60,11 +38,13 @@ export default function App({ Component, pageProps }: AppProps) {
         description="CircuitXperts provides cutting-edge electronic design and manufacturing services including FPGA design, SI Analysis, PI, PCB Manufacturing, and Embedded Software."
         canonical={process.env.NXT_SITE_URL + router.asPath}
         openGraph={{
+          type: "website",
           url: process.env.NXT_SITE_URL + router.asPath,
           title:
             "CircuitXperts | Electronic Design and Manufacturing Solutions",
           description:
             "FPGA design, Signal Integrity, Power Integrity, PCB Manufacturing, Test Code development, Embedded Software, IP Core design, CircuitXperts",
+          site_name: "CircuitXperts",
           images: [
             {
               url: process.env.NXT_SITE_URL + "/images/circuit-xperts-logo.svg",
@@ -80,6 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <BreakpointProvider>
           <Layouts>
             <Component {...pageProps} />
+            <Analytics />
           </Layouts>
         </BreakpointProvider>
       </Provider>
