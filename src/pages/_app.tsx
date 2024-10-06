@@ -10,6 +10,7 @@ import { DefaultSeo } from "next-seo";
 import { Provider } from "react-redux";
 import { store } from "../store";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -61,6 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Layouts>
             <Component {...pageProps} />
             <Analytics />
+            <SpeedInsights />
           </Layouts>
         </BreakpointProvider>
       </Provider>
